@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medienos Skaiciuokle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-wrapper">
+        <div class="block-wrapper">
+            <h1>🌲 Medienos Skaiciuokle</h1>
+        </div>
+    </div>
+
+    <div class="block-wrapper">
+        <h2>📋 Informacija</h2>
+        <div class="info-text">
+            <p><strong>Kaip naudotis skaiciuokle:</strong></p>
+            <ul>
+                <li>Iveskite lentu matmenis (ilgis, plotis, storis)</li>
+                <li>Pasirinkite medienos rusi</li>
+                <li>Nurodykite lentu kieki</li>
+                <li>Spauskite "Prideti elementa" ir skaiciuokle apskaiciuos kubatura bei kaina</li>
+                <li>Galite prideti kelis skirtingus elementus</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="block-wrapper">
+        <h2>📏 Medienos parametrai</h2>
+        <div class="input-wrapper">
+            <label for="length">Ilgis (m):</label>
+            <input type="number" min="0.01" step="0.1" value="3.0" id="length">
+            <div class="error-message">Ilgis turi buti teigiamas skaicius</div>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="width">Plotis (m):</label>
+            <input type="number" min="0.01" step="0.01" value="0.15" id="width">
+            <div class="error-message">Plotis turi buti teigiamas skaicius</div>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="thickness">Storis (m):</label>
+            <input type="number" min="0.01" step="0.01" value="0.05" id="thickness">
+            <div class="error-message">Storis turi buti teigiamas skaicius</div>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="wood-type">Medienos rusis:</label>
+            <select id="wood-type">
+                <option value="450">Pusis (450 €/m³)</option>
+                <option value="520">Egle (520 €/m³)</option>
+                <option value="680">Berzas (680 €/m³)</option>
+                <option value="750">Azuolas (750 €/m³)</option>
+                <option value="600">Klevas (600 €/m³)</option>
+                <option value="580">Liepa (580 €/m³)</option>
+            </select>
+            <div class="wood-type-info">Kaina pateikta uz kubini metra</div>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="quantity">Lentu kiekis (vnt.):</label>
+            <input type="number" min="1" step="1" value="10" id="quantity">
+            <div class="error-message">Kiekis turi buti teigiamas skaicius</div>
+        </div>
+
+        <div class="button-group">
+            <button id="add-item">Prideti elementa</button>
+            <button id="calculate">Skaiciuoti bendra</button>
+            <button id="reset">Isvalyti viska</button>
+        </div>
+    </div>
+
+    <div class="block-wrapper">
+        <h2>📝 Prideti elementa</h2>
+        <div id="item-list">
+            <p style="text-align: center; color: #666; font-style: italic;">
+                Elementu sarasas tuscias. Pridekite pirmus elementus auksciau.
+            </p>
+        </div>
+    </div>
+
+    <div class="block-wrapper result-wrapper">
+       <h2>📊  Skaiciavimo rezultatai</h2>
+        <div id="results">
+            <div class="result-item">
+                <p>Kol kas nera skaiciavimu. Pridekite elementu ir spauskite "Skaiciuoti bendra".</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
