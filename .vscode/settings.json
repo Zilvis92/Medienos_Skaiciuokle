@@ -1,8 +1,4 @@
 {
-    "cSpell.ignoreWords": [
-        "Informacija"
-    ],
-    "cSpell.words": [
-        "Kaip"
-    ]
+  "cSpell.ignoreWords": ["Informacija"],
+  "cSpell.words": ["Kaip", "Validacijos"]
 }
